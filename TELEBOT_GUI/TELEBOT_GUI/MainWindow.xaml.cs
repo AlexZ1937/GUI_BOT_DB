@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SQLite;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+using Telegram.Bot;
 
 namespace TELEBOT_GUI
 {
@@ -20,8 +10,11 @@ namespace TELEBOT_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        static TelegramBotClient client;
+        static string path = "botDB.sqlite";
         public MainWindow()
         {
+            client = new TelegramBotClient("1149248725:AAG8ECl7OECLm7TOz6ob2yU1CFVks3LkroA");
             InitializeComponent();
         }
     }
